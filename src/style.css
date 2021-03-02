@@ -1,0 +1,202 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.main-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    overflow: scroll;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 70%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+th, td {
+    padding: 12px 15px;
+}
+.main-table tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+.main-table tbody td {
+    text-align: center;
+}
+.main-table thead tr{
+    background-color: #1976d2;
+    color: #ffffff;
+}
+.table-buttons{
+    border-radius: 4px;
+    outline: none;
+    background-color: #1976d2;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.table-buttons span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.table-buttons span:after {
+    content: '\2B81';
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.table-buttons:hover span {
+    padding-right: 25px;
+}
+
+.table-buttons:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.table-buttons-up{
+    outline: none;
+    border-radius: 4px;
+    background-color: #1976d2;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.table-buttons-up span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.table-buttons-up span:after{
+    content: '\2B61';
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    right: -20px;
+    transition: 0.5s;
+}
+.table-buttons-up:hover span {
+    padding-right: 25px;
+}
+
+.table-buttons-up:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.table-buttons-down{
+    outline: none;
+    border-radius: 4px;
+    background-color: #1976d2;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.table-buttons-down span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.table-buttons-down span:after{
+    content: '\2B63';
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    right: -20px;
+    transition: 0.5s;
+}
+.table-buttons-down:hover span {
+    padding-right: 25px;
+}
+
+.table-buttons-down:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.pagination{
+    box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    background: #3d94f6 linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    border-radius:6px;
+    border:1px solid #337fed;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #1570cd;
+}
+.pagination:last-child{
+    margin-left: 5px;
+}
+.pagination:hover {
+    background: #1e62d0 linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+}
+.pagination:active {
+    position:relative;
+    top:1px;
+}
+.pagination:focus{
+    outline: none;
+}
+.pagination-pages{
+    margin-left: 5px;
+    box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    background: #3d94f6 linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    border-radius:6px;
+    border:1px solid #337fed;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #1570cd;
+}
+.pagination-pages:hover {
+    background: #1e62d0 linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+}
+.pagination-pages:active {
+    position:relative;
+    top:1px;
+}
+.pagination-pages:focus{
+    outline: none;
+}
+.pagination-container{
+    float:left;
+    margin-bottom: 5px;
+}
+.search-input{
+    float:right;
+    padding:6px;
+    border: 2px solid #3d94f6;
+    border-radius: 4px;
+    width: 30%;
+    margin-bottom: 5px;
+}
