@@ -16,25 +16,27 @@ function Table() {
   })
 
   useEffect(() => {
-    const findResults = [...users]
-      .filter(
-        (item) =>
-          item.first_name.toLowerCase().includes(searchValue) ||
-          item.last_name.toLowerCase().includes(searchValue) ||
-          item.gender.toLowerCase().includes(searchValue)
-      )
-      .sort((a, b) => {
-        if (a[sortConfig.key] < b[sortConfig.key]) {
-          return sortConfig.direction === 'ascending' ? -1 : 1
-        }
-        if (a[sortConfig.key] > b[sortConfig.key]) {
-          return sortConfig.direction === 'ascending' ? 1 : -1
-        }
-        return 0
-      })
+    const findResults = [...users].filter(
+      (item) =>
+        item.first_name.toLowerCase().includes(searchValue) ||
+        item.last_name.toLowerCase().includes(searchValue) ||
+        item.gender.toLowerCase().includes(searchValue)
+    )
     setSearchResults(findResults)
   }, [searchValue, sortConfig])
 
+  const sortItems = () => {
+    searchResults.sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction === 'ascending' ? -1 : 1
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === 'ascending' ? 1 : -1
+      }
+      return 0
+    })
+    return searchResults
+  }
   useEffect(() => {
     setMaxPages(Math.ceil(searchResults.length / 50))
   }, [maxPages, searchResults])
@@ -143,7 +145,7 @@ function Table() {
               <td>No results found</td>
             </tr>
           ) : null}
-          {searchResults
+          {sortItems()
             .slice(currentPage * 50, (currentPage + 1) * 50)
             .map((data) => (
               <tr key={data.id}>
